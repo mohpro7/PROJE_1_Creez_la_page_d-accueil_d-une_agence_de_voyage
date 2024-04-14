@@ -30,7 +30,7 @@ html body {
   }
 
 /****** header ***********/
-.header_container {
+.label_and_filters{
     display: flex;
     justify-content: space-between; 
     width: 100%;
@@ -156,18 +156,13 @@ html body {
 }
 
 /****** /filtres ***********/
-.filters {
+.label_and_filters {
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    flex-direction: column;
     padding: 0 50px;
     margin-top: 30px;
     box-sizing: border-box;
-}
-
-.label_and_filters {
-    display: flex;
 }
 
 .filters_label {  
@@ -185,10 +180,6 @@ html body {
     padding-right: 10px;
     width: 22px;
     height: 22px;
-}
-
-.filters_container {
-    display: flex;
 }
 
 .first_group_filters {
@@ -216,7 +207,7 @@ html body {
     gap: 10px;
 }
 
-.filters button {
+.label_and_filters button {
     width: 100%;
     height: 100%;
     border-radius: 25px;
@@ -238,7 +229,9 @@ html body {
 
 .info_bar {
     display: flex;
+    align-self: flex-start;
     margin-bottom: 50px;
+    padding: 0 50px;
 }
 
 .fa-info {
@@ -269,7 +262,6 @@ a {
 
 .card {
     width: 100%;
-    height: 100%;
     background-color: white;
     border-radius: 20px;
     padding: 5px;
@@ -308,17 +300,15 @@ a {
 .hebergements_and_populaires section {
     background-color: var(--main-bg-color);
     border-radius: 20px;
-    padding: 30px;
+    padding: 1em;
     box-sizing: border-box;
 }
 
 
-/****** main/Hebergements ***********/
+/****** Hebergements ***********/
 .hebergements {
     display: flex;
-    justify-content: space-between;
     width: 65%;
-    gap: 50px;
     flex-direction: column;
 }
 
@@ -331,13 +321,16 @@ a {
     display: flex;
     width: 100%;
     height: 100%;
-    gap: 20px;
+    gap: 2em;
+}
+
+.cards_hosting_1st_line {
+    margin-bottom: 2em;
+    margin-top: 2em;
 }
 
 
 .hebergements .card_content {
-    width: 250px;
-    height: 64px;
     padding-left: 15px;
     display: flex;
     flex-direction: column;
@@ -356,8 +349,6 @@ a {
 .hebergements .card_txt {
     display: flex;
     flex-direction: column;
-    width: 250px;
-    height: 50%;
     gap: 8px;
 }
 
@@ -368,13 +359,7 @@ a {
 }
 
 
-
-.hebergements .card_rating {
-    display: flex;    
-}
-
-
-/****** main/Populaires ***********/
+/******Populaires ***********/
 .populaires {
     width: 32%;
 }
@@ -427,30 +412,30 @@ a {
     justify-content: center;
     padding-left: 30px;
     margin-top: 50px;
+    margin-bottom: 2em;
     align-items: flex-start;
-    width: 1340px;
-    height: 559px;
-    gap: 40px;
+    gap: 1em;
 }
 
 
 .cards_activity {
     display: flex;
-    gap: 30px;
+    width: 100%;
+    gap: 2em;
     align-items: center;
 }
 
 .cards_activity .card {
     display: flex;
     flex-direction: column;
-    width: 297.5px;
+    width: 22%;
     height: 439px;
     padding: 0;
 }
 
 .cards_activity img {
     
-    height: 380px;
+    height: 88%;
     border-radius: 20px 20px 0px 0px;
 }
 
@@ -462,8 +447,6 @@ a {
 /****** footer ***********/
 .footer {
     display: flex;
-    width: 1340px;
-    height: 163px;
     background-color: #F2F2F2;
     gap: 10em;
     padding: 20px;
@@ -484,27 +467,36 @@ a {
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
+
+    html body {
+        max-width: 1025px ;
+    }
 
     .hebergements_and_populaires {
         flex-direction: column;
         gap: 1em;
     }
 
-    .cards_hosting_1st_line {
-        display: flex;
+    .hebergements_and_populaires {
         flex-direction: column;
     }
 
-    .cards_hosting_2nd_line {
+
+    .cards_hosting_1st_line {
         display: flex;
-        flex-direction: column;   
+    }
+
+    .cards_hosting_2nd_line {
+        display: flex;   
     }
 
     .hebergements {
         width: 100%;
     }
 
+
+    /******Populaires ***********/
     .populaires {
         display: flex;
         width: 100%;
@@ -512,14 +504,18 @@ a {
         flex-direction: column;
     }
 
+    .populaires_cards a {
+        width: 33%;
+    }
+
     .populaires_cards {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-between;
+        gap: 1em;
     }
 
     .populaires_cards .card {
-        flex-direction: column;
         width: 100%;
     }
 
@@ -528,8 +524,27 @@ a {
         flex-direction: column;
     }
 
-    .populaires_cards a {
-        width: auto;
+
+    /****** activités ***********/
+
+    .activity_in_marseille {
+        width: 100%;
+    }
+
+    .cards_activity .card {
+        height: 280px;
+    }
+
+    .cards_activity {
+        gap: 1em;
+    }
+
+    .cards_activity img {
+        height: 80%;
+    }
+
+    .cards_activity h3 {
+        margin: 0.5em;
     }
 
 }
@@ -537,6 +552,10 @@ a {
 /* Small devices (phones, less than 768px) */
 
 @media (max-width: 767.98px) {
+
+    html body {
+        max-width:767.98px ;
+    }
 
 /****** header ***********/
     .header_container{
@@ -637,7 +656,7 @@ a {
     }
 
 
-/****** main/Hebergements And Populaires ***********/
+/****** Hebergements And Populaires ***********/
     .hebergements_and_populaires section {
         display: flex;
         justify-content: center;
@@ -657,7 +676,7 @@ a {
     }
 
 
-/****** main/Hebergements ***********/
+/****** Hebergements ***********/
     .hebergements {
         width: 100%;
         --main-bg-color: none;
@@ -696,7 +715,7 @@ a {
         padding: -2px;
     }
 
-/****** main/Populaires ***********/ 
+/****** Populaires ***********/ 
     .populaires {
         display: flex;
         width: 100%;
@@ -704,6 +723,10 @@ a {
         flex-direction: column;
         padding: 0;
         border-radius: 0;
+    }
+
+    .populaires_cards a {
+        width: 100%;
     }
 
     .populaires_title {
@@ -724,7 +747,7 @@ a {
     }
 
 
-/****** main/activités ***********/
+/****** activités ***********/
     .activity_in_marseille {
         margin-top: 30px;
         justify-content: flex-start;
@@ -740,6 +763,7 @@ a {
 
     .cards_activity .card {
         height: 207px;
+        width: 90%;
     }
 
     .cards_activity img {
