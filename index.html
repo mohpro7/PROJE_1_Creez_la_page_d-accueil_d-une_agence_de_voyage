@@ -16,18 +16,16 @@
 </head>
 
 <body>
-    <header class="header_container">
-        <div>
-            <img class="logo_travel_agency" src="images/logo/Booki@3x.png" alt="logo agence de voyage">
-        </div>
+    <header class="header_container">      
+        <img class="logo_travel_agency" src="images/logo/Booki@3x.png" alt="logo agence de voyage">       
         <nav class="menu">
             <div class="anchor_accommodations">
-                <div>
+                <div class="anchor">
                     <a href="#anchor_accommodations">Hébergements</a>
                 </div>  
             </div>
             <div class="anchor_activities">
-                <div>
+                <div class="anchor">
                     <a href="#anchor_activities">Activités</a>
                 </div>
             </div>
@@ -38,10 +36,13 @@
         <p class="header_subtitle">En plein centre-ville ou en pleine nature</p>
     </section>
     <form class="search_bar search_form">
-            <i class="fa-solid fa-location-dot"></i>
-            <label for="search_input" class="sr-only">zone de texte Rechercher</label>
-            <input type="search" id="search_input" name="search_bar" placeholder="Marseille, France">
-            <button>Rechercher</button> 
+        <i class="fa-solid fa-location-dot"></i>
+        <label for="search_input" class="sr-only">zone de texte Rechercher</label>
+        <input type="search" id="search_input" name="search_bar" placeholder="Marseille, France">
+        <button>
+            <i class="fa-solid fa-magnifying-glass icon"></i>
+            <span class="button_text">Rechercher</span>     
+        </button> 
     </form>
     <div class="label_and_filters">
         <span class="filters_label">Filtres</span>
@@ -63,7 +64,8 @@
         </div>
     </div>
         <div class="info_bar">
-            <p><i class="fa-solid fa-info"></i>Plus de 500 logement sont disponible dans cette ville</p>
+            <i class="fa-solid fa-info"></i>
+            <p>Plus de 500 logement sont disponible dans cette ville</p>
         </div>
     </div> 
         <main class="main_container">
@@ -279,7 +281,7 @@
                     </article>
                     <article class="card">
                         <img src="./images/activites/florian-wehde.jpg" alt="photo de Notre-Dame-de-la-Garde">
-                        <h3 class="card_title">Vieux-Port</h3>
+                        <h3 class="card_title">Notre-Dame-de-la-Garde</h3>
                     </article>
                 </div>
             </div>
